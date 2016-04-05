@@ -31,3 +31,11 @@ get "/pizza" do
 	@ingredients = ["pepperoni", "green peppers"]
 	erb :pizza
 end
+
+get "/hours/ago/5" do
+	erb :t_5h_ago
+end
+
+get "/hours/ago/7" do
+	erb :t_7h_ago
+end
