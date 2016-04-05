@@ -1,0 +1,71 @@
+<%= Date.today %>
+<%= Time.now.strftime("the date is %a %d / %h / %y")%>
+<%= Time.now.strftime("%A %B %d %Y")%>
+<%= Time.new(2015,11,30) %>
+
+
+<!-- Time Formatting Directives (a-z)
+
+This is an amazing function, in that it has an entire range of options to give you the maximum flexibilty possible.  See the list of options below, with a brief explanation. These are simple enough for you to experiment with on your own, so we won’t get into detailed examples.
+
+t.strftime(“%a”)  => “Fri”  # Gives name of week day in short form of the time
+t.strftime(“%b”)  => “Apr” # Gives name of month in short form of the time
+t.strftime(“%c”)  => Fri Apr 11 14:17:02 2014 # Gives date and time
+t.strftime(“%d”)  => 11  # Gives day of month of the time zero padded(01..31)
+t.strftime(“%e”)  => 11  # Gives day of month of the time blank padded(1..31)
+t.strftime(“%f”)  => %f # not useful
+t.strftime(“%g”)  => 14
+t.strftime(“%h”)  => Apr # Equivalent to %b
+t.strftime(“%i”)  => %i # not useful
+t.strftime(“%j)  =>  101 # Gives day of the year
+t.strftime(“%k”)  => 14 #  Gives hour, 24-hour clock, blank-padded ( 0..23)
+t.strftime(“%l”)  => 2 # Gives hour, 12-hour clock, blank-padded ( 0..12)
+t.strftime(“%m”)  => 04  # Gives month of the year
+t.strftime(“%n”)  => newline character (\n)
+t.strftime(“%o”)  => %o
+t.strftime(“%p”)  => PM # Meridian Indicator, upper case (‘AM’ or ‘PM’)
+t.strftime(“%q”)  => %q
+t.strftime(“%r”)  =>  02:17:02 PM # Gives time, 12-hour (same as %I:%M:%S %p)
+t.strftime(“%s”)  => Gives number of seconds since 1970-01-01 00:00:00 UTC.
+t.strftime(“%t”) => tab character (\t)
+t.strftime(“%u”)  = > 5  # Gives Day of the week as a decimal, Monday being 1. (1..7)
+t.strftime(“%v”)  => 11-APR-2014  # Gives VMS date (%e-%b-%Y)
+t.strftime(“%w”)  =>  4 # Gives day of the week (Sunday is 0, 0..6)
+t.strftime(“%x”)  => 04/11/14 # Gives representation for the date alone, no time
+t.strftime(“%y”)  => 14 # Gives year without century of the time
+t.strftime(“%z”)  => +0530
+To see how these options can be used in actual programs, check out this practical Ruby training.
+
+Time Formatting Directives (A-Z)
+
+If you thought the list above was all you may ever need, think again. Strftime also has a bunch of uppercase directives. Take a look below.
+
+t.strftime(‘%A’) => Friday # Gives week day in full form of the time
+t.strftime(‘%B’) => April # Gives the full month name
+t.strftime(‘%C’) => 20 # year/100 =>  2014/100  => rounded to 20
+t.strftime(‘%D’) => Date(%m/%d/%y)
+t.strftime(‘%E’) =>
+t.strftime(‘%F’) => Equivalent to %Y-%m-%d(the ISO 8601 date format)
+t.strftime(‘%G’) =>
+t.strftime(‘%H’) => 14 Gives hour of the time in 24 hour clock format
+t.strftime(‘%I’) => 2 Gives hour of the time in 12 hour clock format
+t.strftime(‘%J’) =>  17 Gives Minutes of the time
+t.strftime(‘%K’) =>
+t.strftime(‘%L’) => Millisecond of the second(000…999)
+t.strftime(‘%M’) => Minute of the hour(00..59)
+t.strftime(‘%N’) =>Fractional seconds digits, default is 9 digits (nanosecond)
+%3N millisecond (3 digits)
+%6N microsecond (6 digits)
+%9N nanosecond (9 digits)
+t.strftime(‘%O’) =>
+t.strftime(‘%P) =>  pm # Meridian Indicator, lower case (‘am’ or ‘pm’)
+t.strftime(‘%Q’) =>
+t.strftime(‘%R’) =>14:17:02
+t.strftime(‘%S’) =>  02 Gives Seconds of the time
+t.strftime(‘%T’) =>  14:17:02  #Gives  24 hour time
+t.strftime(‘%U’) => Week number of the present year, beginning with the first Sunday as the first day of the first week(01..53)
+t.strftime(‘%V’) => Week number of year according to ISO 8601(01..53)
+t.strftime(‘%W’) => Week number of the present year, beginning with the first Monday as the first day of the first week(01..53)
+t.strftime(‘%X’) => 14:17:02  # Preferred representation for the time alone with no date
+t.strftime(‘%Y’) => 2014 # Gives Year of the time
+t.strftime(‘%Z’) => IST # Gives Time Zone of the time -->
