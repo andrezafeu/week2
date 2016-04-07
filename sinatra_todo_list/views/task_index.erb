@@ -1,0 +1,18 @@
+<html>
+<head>
+  <title>Tasks</title>
+</head>
+<body>
+
+	<h1>These are your tasks</h1>
+
+<ul>
+	<% @tasks.each do |task| %>
+		<li> <%= task.content %></li>
+	<% end %>
+</ul>
+
+<a href="/new_task">Create a new Task</a>
+
+</body>
+</html>

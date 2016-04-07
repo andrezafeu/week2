@@ -27,11 +27,13 @@ RSpec.describe "Todo List with Sinatra" do
 		expect(check.find_task_by_id("sdf") ) .to eq(nil)
 	end
 
-	it "sorts the array by the time the tasks were created" do
-		task4 = Task.new("Clean table") 
-		task5 = Task.new("Take trash out")
-		expect(check.sort_by_created) .to eq(task4<task5)
-		check.sort_by_created
-	end
+	it "sorts the array by the time the tasks were created, ASC or DESC" do
+        task4 = Task.new("Clean table")
+        task5 = Task.new("Clean bathroom")
+        check.add_task(task4)
+        check.add_task(task5)
+        expect(check.sort_by_created("ASC")).to eq([task4, task5])
+        expect(check.sort_by_created("DESC")).to eq([task5, task4])
+    end
 
 end
