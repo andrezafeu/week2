@@ -1,4 +1,3 @@
-#server.rb
 require "sinatra"
 
 get "/" do
