@@ -2,8 +2,6 @@ require_relative "../lib/lexiconomitron.rb"
 
 RSpec.describe "#eat_t" do
 
-# describe Lexiconomitron do 
-
   	before :each do
 		@lexi = Lexiconomitron.new
 		#better way to do it:
@@ -12,7 +10,6 @@ RSpec.describe "#eat_t" do
 	end
 
     it "removes every letter t from the input" do
-      # @lexi = Lexiconomitron.new
       expect(@lexi.eat_t("great scott!")).to eq("grea sco!")
     end
 
@@ -21,11 +18,8 @@ RSpec.describe "#eat_t" do
 	end
 
     it "loompa get word with 3 letter or less and revome the t" do
-    	expect(@lexi.loompa(["if","you","wanna","be","my","lover"]) ).to eq( ["if","you","be","my"] )
-	end
-	
-	it "loompa get word with 3 letter or less and revome the t" do
-    	expect(@lexi.loompa(["ift","you","wanna","be","myt","lover"]) ).to eq( ["if","you","be","my"] )
-	end
+    	expect(@lexi.loompa(["talk", "to", "you", "later"]) ).to eq( ["o","you"])
+    end
+
 end
 

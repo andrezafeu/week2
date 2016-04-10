@@ -21,10 +21,9 @@ class Lexiconomitron
 			array[i].reverse!
 			i = i+1
 		end 
-		string1 = eat_t(array[0])
-		stringfinal = eat_t(array[array.length-1])
-		new_array.push(string1)
-		new_array.push(stringfinal)
+		first_word = eat_t(array[0])
+		last_word = eat_t(array[array.length-1])
+		new_array.push(first_word, last_word)
 		new_array
 	end
 
