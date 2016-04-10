@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>Sinatra Blog</title>
+</head>
+<body>
+
+	<h1>Blog's Front Page</h1>
+
+
+	<% @latest_first.each_with_index do |post, i| %>
+
+		<ul>
+		<li> 
+			<h2><a href="/post_details/<%= i %>"><%= post.title %></a></h2>
+		</li>
+		<br>
+	<% end %>
+	</ul>
+
+	<h3><a href="/new_post">Create a new Post!</a></h3>
+
+</body>
+</html>
